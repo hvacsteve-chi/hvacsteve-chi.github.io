@@ -8,5 +8,9 @@ const rootTITLE = document.title;
 console.log(rootTITLE);
 const rootAPP = document.querySelector("APP");
 console.log(rootAPP);
-
+const DATENowSpan = document.getElementById("DateNOW");
+console.log(DATENowSpan);
+const NEWDate = new Date();
+console.log(NEWDate);
+DATENowSpan.innerHTML = NEWDate.getFullYear() + " ";
 
