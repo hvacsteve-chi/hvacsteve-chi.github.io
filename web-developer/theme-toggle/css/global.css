@@ -1,23 +1,166 @@
-*,*::before,*::after {margin:0;padding:0;box-sizing:border-box;}
-html{height:100vh;font-size:10px;}
-body{font-size:calc(1.4rem + 0.18vw);min-height:100%;min-width:100%;}
-ul{list-style:none;}
-header{
-    width:100%;
-    height: auto;
+*,:before,:after {
     margin:0;
-    padding:1rem;
+    padding:0;
+    box-sizing:inherit;
+    text-size-adjust: auto;
+    -webkit-box-sizing:inherit;
+    -webkit-font-smoothing:antialiased;
+    -webkit-tap-highlight-color:transparent;
+    -webkit-text-size-adjust: auto;
+}
+html{
+    height:100vh;
+    box-sizing:border-box;
+    font-size:10px;
+    font-style:normal;
+    font-weight:400;
+    font-family: Roboto, system-ui, monospace, sans-serif;
+    line-height:1.5;
+    tab-size:4;
+    font-feature-settings:normal;
+    font-variation-settings:normal;
+    overflow: hidden scroll;
+    white-space: normal;
+}
+body{
+    font-size:calc(2rem + 0.18vw);
+    min-height:100%;
+    min-width:100%;
+    background-color:#212124;
+}
+.sr-only{
+    position:absolute;
+    width:1px;
+    height:1px;
+    padding:0;
+    margin:-1px;
+    overflow:hidden;
+    clip:rect(0,0,0,0);
+    white-space:nowrap;
+    border-width:0;
+}
+.relative{
+    position:relative;
+}
+.z-10{
+    z-index:10;
+}
+/* Recommended icon sizes */
+.material-symbols-outlined.size-20 {
+    font-size: 20px;
+    font-variation-settings: 'OPSZ' 20;
+}
+.material-symbols-outlined.size-24 {
+    font-size: 24px;
+    font-variation-settings: 'OPSZ' 24;
+}
+.material-symbols-outlined.size-40 {
+    font-size: 40px;
+    font-variation-settings: 'OPSZ' 40;
+}
+.material-symbols-outlined.size-48 {
+    font-size: 48px;
+    font-variation-settings: 'OPSZ' 48;
+}
+/* Rules for using icons as black on a light background. */
+.material-symbols-outlined.dark {
+    color: rgba(255, 255, 255, 1);
+    font-variation-settings: 'GRAD' -25;
+}
+.material-symbols.outlined.dark-inactive {
+    color: rgba(255, 255, 255, 0.3);
+    font-variation-settings: 'GRAD' -25;
+}
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height: auto;
+    min-height: 65px;
+    overflow:hidden;
+    background-color:transparent;
+    display:grid;
+    place-items:center;
+    z-index:1000;
+}
+.site-header-wrapper{
+    height:100%;
+    width:100%;
+    padding: 0 10px;
     display:flex;
     align-items: center;
     justify-content: space-between;
     flex-direction:row;
-    background:#111;
+    background-color:#111;
     color:#ffe;
 }
-nav ul{display:flex; flex-direction:row;}
-nav ul li{padding:0 8px;}
-a{text-decoration:none; color:#ffe;}
-a:visited{text-decoration:none; color:#ffe;}
-a:hover{text-decoration:underline; color: #8aff00;}
-main{padding:0 8px;}
-footer{padding:0 8px;}
+h1.header-h1{
+    font-size:calc(2.2rem + 0.18vw);
+    font-weight:600;
+}
+ul{
+    list-style:none;
+}
+nav ul{
+    display:flex;
+}
+nav ul li{
+    padding:0 8px;
+}
+a.li-link{
+    font-size:calc(1.5rem + 0.18vw);
+}
+a{
+    text-decoration:none;
+    color: rgba(10, 190, 255, 0.82);
+    user-select: none;
+}
+a:visited{
+    transition-delay:.1s;
+    text-decoration:none;
+    color:#ffe;
+}
+a:is(:hover,:focus){
+    text-decoration:underline;
+    color: #8aff00;
+}
+main{
+    display:grid;
+    padding-top:65px;
+    height: 100%;
+    min-height: 100vh;
+    background-color: transparent;
+}
+.site-main-wrapper{
+    position:relative;
+    height:100%;
+    width:100%;
+    padding: 0 10px;
+    background-color:#212124;
+    color:#ffe;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+footer{
+    height: auto;
+    min-height: 65px;
+    overflow:hidden;
+    background-color:transparent;
+    display:grid;
+    place-items:center;
+}
+.site-footer-wrapper{
+    height:100%;
+    width:100%;
+    padding: 0 10px;
+    display:flex;
+    align-items: center;
+    flex-direction:row;
+    background-color:#313134;
+    color:#ffe;
+}
+.footer-span-date-now{
+    font-size:calc(1.4rem + 0.18vw);
+}
